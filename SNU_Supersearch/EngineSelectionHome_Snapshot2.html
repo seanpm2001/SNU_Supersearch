@@ -1,0 +1,693 @@
+<!--- start of script !--->
+<HTML>
+<head> <!-- external and internal resources needed for page !-->
+<!-- .*. !--> <!-- 01 !--><!-- Encoding !--><meta charset="UTF-16"><!-- the script needed for UTF-16 encoding !--><!-- Internal resource !-->
+<!-- .ico !--><!-- 02 !--<!-- Favicon !--><link rel="icon" href="SNU_UNDERCONSTRUCTION_favicon.ico" type="image/x-icon"/><!-- The favicon for this page !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .js !--> <!-- 03 !--<!-- JavaScript file 1 !--><!--<script type="text/javascript" src="ExpandAll_ScriptV1.00.js"></script><!-- the script needed to automatically expand all detail tags !--><!-- external resource !-->
+<!-- .js !--><!-- 04 !--><!-- JavaScript file !--><script type="text/javascript" src="Sourcebase_SNUScriptStarter_V1.00.js"></script><!-- The full JavaScript SNU sheet, modify to your liking !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 05 !--<!-- Stylesheet 1 !--><!--<link rel="stylesheet" type="text/css" href="2DStart_Style_StickySideBarVersion1.01.css"> <!-- The stylesheet for the sidebar !--><!-- external resource !-->
+<!-- No longer necessary !--><!-- .css !--><!-- 06 !--<!-- Stylesheet 2 !--><!--<link rel="stylesheet" type="text/css" href="TOP_NAVIGATION_BAR_V1.0.css"> <!-- The stylesheet for the top navigation pane !--><!-- external resource !-->
+<!-- .css !--><!-- 07 !--<!-- Stylesheet 3 !--><link rel="stylesheet" type="text/css" href="Sourcebase_SNUScriptStarter_V1.01.css"> <!-- Make sure to modify this CSS to your liking !--><!-- The stylesheet for the white text !--><!-- external resource !-->
+</head>
+<HEAD>
+<meta>
+	<meta charset="UTF-16"> <!-- Page encoding main !-->
+</meta>
+<style>
+/* Sourcebase CSS starter file
+Version 1.01 (September 27th 2019 build)
+Most recent: 1.01 (September 27th 2019 build)
+CSS starter script
+*/
+/* Start of stylesheet rules */
+/* Grid system */
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Transparent boxes */
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #00BFFF; /* The text was there, the background was the wrong color. A new beautiful shade of blue was added to fix this - April 6th 2019 */
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+div.transbox p {
+  margin: 1%; /* make sure this stays at 1%. At 5%, there is a large spacing issue between each new paragraph */
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Sidebar */
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+/* Topbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Headings */
+H1 {
+	color: black;
+}
+H2 {
+	color: black;
+}
+H3 {
+	color: black;
+}
+H4 {
+	color: black;
+}
+H5 {
+	color: black;
+}
+H6 {
+	color: black;
+}
+/* Dividers, paragraphs */
+HR {
+	color: black;
+}
+p {
+	color: black;
+}
+/* Other rich text */
+i {
+	color: black;
+}
+u {
+	color: black;
+}
+b {
+	color: black;
+}
+s {
+	color: black;
+}
+sub {
+	color: black;
+}
+sup {
+	color: black;
+}
+/* Details and summary */
+details {
+	color: black;
+}
+summary {
+	color: black;
+}
+/* Progress bar 
+/* Option 1 */
+progress {
+	display:inline-block;
+	width:190px;
+	height:20px;
+	padding:15px 0 0 0;
+	margin:0;
+	background:none;
+	border: 0;
+	border-radius: 15px;
+	text-align: left;
+	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+	height:11px;
+	width:150px;
+	margin:0 auto;
+	background-color: #CCC;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+	display:inline-block;
+	float:left;
+	height:11px;
+	margin:0px -10px 0 0;
+	background: #F70;
+	border-radius: 15px;
+	box-shadow:0px 0px 6px #777 inset;
+}
+progress:after {
+	margin:-26px 0 0 -7px;
+	padding:0;
+	display:inline-block;
+}
+/* Option 2 */
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 20px;
+    width: 300px;
+    padding: 3px;
+}
+
+#progress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+/* Option 3 */
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+/* Option 4 */
+/* Step 1 */
+progress,          /* All HTML5 progress enabled browsers */
+{
+
+    /* Turns off styling - not usually needed, but good to know. */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+}
+/* Step 2 */
+/* IE10 */
+progress {
+    color: black;
+}
+
+/* Firefox */
+progress::-moz-progress-bar { 
+    background: black;  
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: black;
+}
+/* Step 3 */
+progress[value^="9"]::-moz-progress-bar {
+background-color : red;
+}
+/* 
+More CSS - Blackboard kit
+blackboard kit 
+Version 1
+*/
+/* white text for all! */
+/* the blackboard CSS file optimizes text for dark backgrounds, just like chalk on a blackboard */
+/* heading section */
+h1 {
+	color: white;
+}
+H1 {
+	color: white;
+}
+h2 {
+	color: white;
+}
+H2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+H3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+H4 {
+	color: white;
+}
+h5 {
+	color: white;
+}
+H5 {
+	color: white;
+}
+h6 {
+	color: white;
+}
+H6 {
+	color: white;
+}
+/* rich text section */
+p {
+	color: white;
+}
+P {
+	color: white;
+}
+b {
+	color: white;
+}
+B {
+	color: white;
+}
+u {
+	color: white;
+}
+U {
+	color: white;
+}
+s {
+	color: white;
+}
+S {
+	color: white;
+}
+i {
+	color: white;
+}
+I {
+	color: white;
+}
+sub {
+	color: white;
+}
+SUB {
+	color: white;
+}
+sup {
+	color: white;
+}
+SUP {
+	color: white;
+}
+}
+details {
+	color: white;
+}
+DETAILS {
+	color: white;
+/* OPTIONAL */
+/*
+a {
+	color: white;
+}
+A {
+	color: white;
+}
+*/
+/* form section */
+form {
+	color: white;
+}
+FORM {
+	color: white;
+}
+/* specialized button hyperlink section */
+a {
+	color: green;
+}
+A {
+	color: green;
+}
+/* WebGL compatibility layer */
+canvas {
+	border: 2px solid black;
+	background-color: black;
+}
+video {
+	display: none;
+}
+/* Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Border image */
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+/* end of stylesheet */
+/* End of stylesheet rules */
+/* Description
+None
+*/
+/* Statistics
+Character count: 07,.349 characters (07,.349 bytes) (07,.349 Kilobytes)
+Line count: 0,.456
+File type: *.css (Cascade Styling Sheets)
+Language: CSS (Cascade Styling Sheets)
+Version: 2 (September 27th 2019)
+Latest version: 2 (September 27th 2019)
+First version: 1 (September 26th 2019)
+*/
+</style>
+<?
+// PHP section
+?>
+<script>
+console.log("SNU web console for [browser]");
+console.log("The [section] console");
+console.log(">>>");
+</script>
+<TITLE>Search engine selection page - SNU Supersearchs</TITLE> <!-- Page title !-->
+</HEAD>
+<BODY BGCOLOR="NAVY">
+<BODY BACKGROUND=".png"> <!-- Background image !--> <!-- Allowed formats: .png .jpg .jpe .jif .gif .bmp .dib .tif .tiff !-->
+<!-- Top navigation bar !-->
+<div class="topnav">
+<a class="active" href="">|{🔍 Search Engine List }|</a>
+<a href="#">|></a>
+<a href="#FullSE">⛓ Full search engine (FSE)</a>
+<a href="#OSOSE">⛓ One Site only (OSOSE)</a>
+<a href="Home.html">⛺ Back to home page</a>
+<a href="about:blank">❎ Exit SNU</a>
+<a href="#"><|</a>
+</div> 
+<!-- This part of the engine is mandatory, but I also enjoy developing it. It looks pretty nice, and exactly as I pictured it, and it is only the second day !-->
+<ul>
+<img src="Search_EngineIcon.png" alt="Logo.Profile_Icon" width="225" height="225">
+<li><a class="active" href="#home">[Search Engines list]</a></li>
+<HR>
+<details>
+	<summary><li><a href="#EXPLORE">Index of the search engine list</a></li></summary>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="#FullSE">Full-on search engines (entire internet)</a></li></summary>
+	<!-- A section !-->
+	<li><a href="#AOL">🔍 AOL</a></li>
+	<li><a href="#ASK">🔍 Ask (formerly Ask Jeeves)</a></li>
+	<!-- B section !-->
+	<li><a href="#BING">🔍 Bing</a></li>
+	<!-- D section !-->
+	<li><a href="#DuckDuckGo">🔍 DuckDuckGo</a></li>
+	<!-- E section !-->
+	<li><a href="#ECOSIA">🔍 Ecosia</a></li>
+	<!-- G section !-->	 
+	<li><a href="#Google">🔍 Google</a></li>
+	<!-- S section !-->
+	<li><a href="#StartPage">🔍 Startpage</a></li>
+	<!-- Y section !-->
+	<li><a href="#YAHOO">🔍 Yahoo!</a></li>
+	<li><a href="#YANDEX">🔍 Yandex</a></li>
+	</details>
+	<li><HR></li>
+	<details><summary><li id="">One site only search engines (within a website)</a></li></summary>
+	<!-- A section !-->
+	<li><a href="#Amazon_OSO">🔍 Amazon</a></li>
+	<!-- W section !-->
+	<li><a href="#Wikipedia_OSO">🔍 Wikipedia</a></li>
+	</details>
+	<li><HR></li>	
+	<details><summary><li id="">Other page data</a></li></summary>
+	<li><a href="#SnapshotSection">[-] Snapshot section</a></li>
+	</details>
+	<li><HR></li>
+</ul>
+<div style="margin-left:15.1%;padding:1px 16px;height:1000px;">
+<!-- End of sidebar and topbar section !-->
+<HR>
+<H1>Select a search engine to use</H1>
+<H2 id="FullSE">Full Search engines</H2>
+<!-- A section !-->
+<img src="AOLLogo.png" alt="AmericaOnLine Logo" width="128" height="128" id="AOL">
+<H2><button><a href="https://www.aol.com">AOL (https://www.aol.com)</a></button></H2>
+<img src="ASKLogo.png" alt="ASK Logo" width="128" height="128" id="ASK">
+<H2><button><a href="https://www.ask.com">Ask (https://www.ask.com)</a></button></H2>
+<!-- B section !-->
+<img src="BingLogo.png" alt="MicrosoftBingLogo" width="128" height="128" id="Bing">
+<H2><button><a href="https://www.bing.com">Bing (https://www.bing.com)</a></button></H2>
+<!-- C section !-->
+
+<!-- D section !-->
+<img src="DuckDuckGoLogo.png" alt="DDG Logo" width="128" height="128" id="DuckDuckGo">
+<H2><button><a href="https://www.duck.com">Duck (redirect to duckduckgo) (https://www.duck.com)</a></button></H2>
+<img src="DuckDuckGoLogo.png" alt="DDG Logo" width="128" height="128" id="DuckDuckGo">
+<H2><button><a href="https://www.duckduckgo.com">DuckDuckGo (https://www.duckduckgo.com)</a></button></H2>
+<!-- E section !-->
+<img src="EcosiaLogo.png" alt="Ecosia Logo" width="128" height="128" id="ECOSIA">
+<H2><button><a href="https://www.ecosia.com">Ecosia (https://www.ecosia.com)</a></button></H2>
+<!-- F section !-->
+
+<!-- G section !-->
+<img src="GoogleLogo.png" alt="Google Logo" width="128" height="128" id="Google">
+<H2><button><a href="https://www.google.com">Google (https://www.google.com)</a></button></H2>
+<!-- H section !-->
+
+<!-- I section !-->
+
+<!-- J section !-->
+
+<!-- K section !-->
+
+<!-- L section !-->
+
+<!-- M section !-->
+
+<!-- N section !-->
+
+<!-- O section !-->
+
+<!-- P section !-->
+
+<!-- Q section !-->
+
+<!-- R section !-->
+
+<!-- S section !-->
+<img src="StartPageLogo.jpg" alt="StartPage Logo" width="128" height="128" id="StartPage">
+<H2><button><a href="https://www.startpage.com">Startpage (https://www.startpage.com)</a></button></H2>
+<!-- T section !-->
+
+<!-- U section !-->
+
+<!-- V section !-->
+
+<!-- W section !-->
+
+<!-- X section !-->
+
+<!-- Y section !-->
+<img src="YahooLogo.png" alt="StartPage Logo" width="128" height="128" id="YAHOO">
+<H2><button><a href="https://www.yahoo.com">Yahoo! (https://www.yahoo.com)</a></button></H2>
+<img src="YandexLogo.png" alt="YandexLogo" width="128" height="128" id="YANDEX">
+<H2><button><a href="https://ru.yandex.com">Yandex (Russian) (https://ru.yandex.com)</a></button></H2>
+<!-- Z section !-->
+
+<!-- Divider !-->
+<HR>
+<!-- Divider !-->
+<H2 id="OSOSE">One site only</H2>
+<!-- A section !-->
+<img src="AmazonLogo.png" alt="Amazon" width="128" height="128">
+<H2 id="Amazon_OSO><button><a href="https://www.amazon.com">Amazon (https://www.amazon.com)</a></button></H2>
+<!-- B section !-->
+
+<!-- C section !-->
+
+<!-- D section !-->
+
+<!-- E section !-->
+
+<!-- F section !-->
+
+<!-- G section !-->
+
+<!-- H section !-->
+
+<!-- I section !-->
+
+<!-- J section !-->
+
+<!-- K section !-->
+
+<!-- L section !-->
+
+<!-- M section !-->
+
+<!-- N section !-->
+
+<!-- O section !-->
+
+<!-- P section !-->
+
+<!-- Q section !-->
+
+<!-- R section !-->
+
+<!-- S section !-->
+
+<!-- T section !-->
+
+<!-- U section !-->
+
+<!-- V section !-->
+
+<!-- W section !-->
+<img src="WikipediaLogo.png" alt="Wikipedia" width="128" height="128">
+<H2 id="Wikipedia_OSO"><button><a href="https://wikipedia.org">Wikipedia (https://wikipedia.org)</a></button></H2>
+<!-- X section !-->
+
+<!-- Y section !-->
+
+<!-- Z section !-->
+<HR>
+<details><summary><H2 id="SnapshotSection">View older versions of this page</H2></summary> 
+<H3>Snapshots 1 to 10</H3>
+<H4><button><a href="EngineSelectionHome_Snapshot1.html">Snapshot 1</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot2.html">Snapshot 2</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot3.html">Snapshot 3</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot4.html">Snapshot 4</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot5.html">Snapshot 5</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot6.html">Snapshot 6</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot7.html">Snapshot 7</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot8.html">Snapshot 8</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot9.html">Snapshot 9</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot10.html">Snapshot 10</a></button></H4>
+<H3>Snapshots 11 to 20</H3>
+<H4><button><a href="EngineSelectionHome_Snapshot11.html">Snapshot 11</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot12.html">Snapshot 12</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot13.html">Snapshot 13</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot14.html">Snapshot 14</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot15.html">Snapshot 15</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot16.html">Snapshot 16</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot17.html">Snapshot 17</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot18.html">Snapshot 18</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot19.html">Snapshot 19</a></button></H4>
+<H4><button><a href="EngineSelectionHome_Snapshot20.html">Snapshot 20</a></button></H4>
+</details>
+<HR>
+<H1>You have reached the bottom of this page.</H1>
+<HR>
+</BODY>
+</HTML>
+<!--- end of script !--->
